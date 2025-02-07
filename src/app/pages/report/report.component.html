@@ -1,0 +1,17 @@
+<div class="report-container">
+  <!-- Botão para voltar -->
+  <button (click)="goBack()" class="back-button">← Voltar para Home</button>
+
+  <h2>{{ report.name }}</h2>
+  <p><strong>Idade:</strong> {{ report.age }}</p>
+  <p><strong>Gênero:</strong> {{ report.gender }}</p>
+  <p><strong>Cidade:</strong> {{ report.city }}</p>
+  <p><strong>Plano de Saúde:</strong> {{ report.medical_insurance }}</p>
+  <p><strong>Exames Realizados:</strong> {{ report.exams_carried_out }}</p>
+  <p><strong>Data do Exame:</strong> {{ report.exames_date | date:'dd/MM/yyyy' }}</p>
+  <p><strong>Diagnóstico:</strong> {{ report.diagnosis }}</p>
+  <p><strong>Justificativa Cirúrgica:</strong> {{ report.surgery_justification }}</p>
+  <p><strong>Procedimentos Indicados:</strong> {{ report.indicated_procedures }}</p>
+  <p><strong>Benefícios da Intervenção:</strong> {{ report.intervention_benefits }}</p>
+  <p><strong>Conclusão:</strong> {{ report.conclusion }}</p>
+</div>
