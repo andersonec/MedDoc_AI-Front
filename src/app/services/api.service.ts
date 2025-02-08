@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
@@ -58,6 +59,24 @@ export class ApiService {
       return response;
     } catch (error) {
       console.error('Erro ao fazer login:', error);
+      throw error;
+    }
+  }
+
+  async newReport(formData: FormData): Promise<Observable<any>> {
+    try {
+      const response = await this.api.post('/responsibles/reports', formData)
+        .then(response => {
+          return response.data;
+        })
+        .catch(error => {
+          console.error('deleteReport failed:', error);
+          throw error;
+        });
+
+      return response.data;
+    } catch (error) {
+      console.error('Erro ao criar novo relatório:', error);
       throw error;
     }
   }

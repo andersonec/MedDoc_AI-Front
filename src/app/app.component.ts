@@ -8,9 +8,8 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(private router: Router) {}
-
-  imagemUrl = './assets/name_no_background.png';
+  [x: string]: any;
+  constructor(private router: Router) { }
 
   logout(): void {
     // Remove o token (e outros dados, se necessário) do armazenamento

@@ -1,11 +1,9 @@
-<mat-toolbar color="primary" *ngIf="shouldShowHeader()">
-  <div>
-    <img mat-card-xl-image src="assets/name_no_background.png" alt="MedDoc_AI" class="name_logo">
-  </div>
-  <span class="spacer"></span>
+<div color="primary" *ngIf="shouldShowHeader()" class="header">
+    <img src="assets/name_no_background.png" alt="MedDoc_AI" style="height: 50px; width: 300px;">
+    
   <button mat-icon-button (click)="logout()">
     <mat-icon aria-hidden="false" aria-label="logout">logout</mat-icon>
   </button>
-</mat-toolbar>
+</div>
 
 <router-outlet></router-outlet>

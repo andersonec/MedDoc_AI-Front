@@ -1,23 +1,21 @@
-<!-- Grid superior com o botão "Novo Relatório" -->
-<mat-toolbar color="primary">
-  <button mat-raised-button color="accent" (click)="novoRelatorio()">Novo Relatório</button>
-</mat-toolbar>
+<div class="content">
+  <!-- Container do botão com espaçamento (estilizado no style.css) -->
+  <div class="button-container" color="primary">
+    <button mat-raised-button color="primary" (click)="openAnnexDocumentsDialog()">Novo Relatório</button>
+  </div>
 
-<div style="margin: 20px;">
   <!-- Tabela com listagem dos relatórios -->
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="width: 100%;">
-
+  <table mat-table [dataSource]="dataSource">
     <!-- Coluna Paciente -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Paciente </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
     </ng-container>
 
     <!-- Coluna Data do Exame -->
     <ng-container matColumnDef="exames_date">
       <th mat-header-cell *matHeaderCellDef> Data do Exame </th>
       <td mat-cell *matCellDef="let element">
-        <!-- Utilize o pipe date se o campo for do tipo Date -->
         {{ element.exames_date | date:'dd/MM/yyyy' }}
       </td>
     </ng-container>
@@ -32,9 +30,9 @@
 
     <!-- Coluna Visualizar -->
     <ng-container matColumnDef="visualizar">
-      <th mat-header-cell *matHeaderCellDef>  </th>
+      <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let element">
-        <button  (click)="getReport(element.id)" mat-mini-fab>
+        <button (click)="getReport(element.id)" mat-mini-fab>
           <mat-icon aria-hidden="false" aria-label="Visualizar" fontIcon="search">Visualizar</mat-icon>
         </button>
       </td>
@@ -42,9 +40,9 @@
 
     <!-- Coluna Excluir -->
     <ng-container matColumnDef="excluir">
-      <th mat-header-cell *matHeaderCellDef>  </th>
+      <th mat-header-cell *matHeaderCellDef> </th>
       <td mat-cell *matCellDef="let element">
-        <button  (click)="deleteReport(element.id)" mat-mini-fab>
+        <button (click)="deleteReport(element.id)" mat-mini-fab>
           <mat-icon aria-hidden="false" aria-label="Excluir" fontIcon="delete">Excluir</mat-icon>
         </button>
       </td>

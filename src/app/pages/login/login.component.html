@@ -1,6 +1,6 @@
 <div class="login-container">
-    <mat-card>
-      <mat-card-title>Login</mat-card-title>
+    <div class="login-form">
+      <img src="assets/logo_no_background.png" style="height: 400px; width: 400px;">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div>
           <mat-form-field appearance="fill">
@@ -31,6 +31,6 @@
       <div *ngIf="errorMessage" class="error-message">
         {{ errorMessage }}
       </div>
-    </mat-card>
+    </div>
   </div>
   

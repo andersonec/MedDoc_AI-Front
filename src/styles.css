@@ -1,13 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-color: #1F1F1F;
+  /* Fundo geral: cinza muito escuro */
+  --header-color: #2C2C2C;
+  /* Cabeçalho/rodapé: cinza escuro */
+  --text-color: #E0E0E0;
+  /* Texto: cinza claro */
+  --accent-color: #707070;
+  /* Elementos de destaque: tom intermediário */
+}
 
 html,
 body {
   height: 100%;
-}
-
-body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--bg-color);
+  padding: 1rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--header-color);
+  color: var(--text-color);
+}
+
+/* Espaçamento inferior na tabela para separar do botão */
+content table {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: var(--header-color);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: var(--text-color);
+}
+
+/* Container do botão: alinha à direita e adiciona margem superior */
+.button-container {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.mat-table {
+  background-color: var(--header-color);
+  color: var(--text-color);
+}
+
+.mat-header-cell, .mat-cell {
+  color: inherit; /* Herda a cor definida para a tabela */
+}
+
+.mat-card {
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+  background-color: var(--header-color);
+  color: var(--text-color);
+}
+
+a,
+.button {
+  color: var(--accent-color);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.login-form {
+  padding: 2rem;
+  width: 400px;
+  text-align: center;
+  background-color: var(--header-color);
+}
+
+.error-message {
+  color: red;
+  margin-top: 1rem;
+}
+
+/* Exemplo de botão */
+button {
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
 }
 
 .blur-backdrop {
@@ -32,7 +129,8 @@ body {
 }
 
 .name_logo {
-  height: 50px; /* Ajuste o tamanho conforme necessário */
+  height: 50px;
+  /* Ajuste o tamanho conforme necessário */
   width: auto;
   margin-right: 10px;
 }
@@ -41,14 +139,30 @@ body {
   flex: 1 1 auto;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  background-color: #222; /* Ajuste a cor conforme necessário */
+.logo {
+  height: 50px;
+  /* Ajuste conforme necessário */
+  width: auto;
 }
 
-.logo {
-  height: 50px; /* Ajuste conforme necessário */
-  width: auto;
+.download-button {
+  background-color: #16a085;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.download-button:hover {
+  background-color: #138d75;
+}
+
+.full-width {
+  width: 100%;
 }

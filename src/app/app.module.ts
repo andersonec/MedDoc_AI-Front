@@ -29,6 +29,7 @@ import { ReportComponent } from './pages/report/report.component';
 import { TokenInterceptor } from './interceptors/token-interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { DeleteConfirmationDialogComponent } from './dialogs/delete-confirmation-dialog/delete-confirmation-dialog.component';
+import { AnnexDocumentsDialogComponent } from './dialogs/annex-documents-dialog/annex-documents-dialog.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { DeleteConfirmationDialogComponent } from './dialogs/delete-confirmation
     LoginComponent,
     HomeComponent,
     DeleteConfirmationDialogComponent,
-    ReportComponent
+    ReportComponent,
+    AnnexDocumentsDialogComponent
   ],
   imports: [
     MatDialogModule,

@@ -2,6 +2,9 @@
   <!-- Botão para voltar -->
   <button (click)="goBack()" class="back-button">← Voltar para Home</button>
 
+  <!-- Botão para download do PDF -->
+  <button (click)="generatePDF()" class="download-button">Baixar PDF</button>
+
   <h2>{{ report.name }}</h2>
   <p><strong>Idade:</strong> {{ report.age }}</p>
   <p><strong>Gênero:</strong> {{ report.gender }}</p>

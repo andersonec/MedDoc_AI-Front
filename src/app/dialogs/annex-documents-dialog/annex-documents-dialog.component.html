@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Anexar Documentos</h1>
+
+<div mat-dialog-content>
+  <p>Por favor, selecione os arquivos necessários para o relatório:</p>
+
+  <div class="file-input">
+    <mat-label>Imagem do Cartão Médico</mat-label>
+    <input type="file" (change)="onFileChange($event, 'medicalCardImage')" accept="image/*" required>
+  </div>
+
+  <div class="file-input">
+    <mat-label>Relatório de Ressonância</mat-label>
+    <input type="file" (change)="onFileChange($event, 'mriReportFile')" accept="application/pdf, image/*" required>
+  </div>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+</div>
